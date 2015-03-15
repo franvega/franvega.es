@@ -1,0 +1,123 @@
+{% extends 'base.html.twig' %}
+{% block title %}Fran Vega Blog{% endblock %}
+{% block styles %}
+    <link href="{{ asset('css/blog.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block body %}
+<!-- Body -->
+<div class="container padding-top-bottom">
+    <div class="row">
+        <div class="col-md-12">
+
+            <h1></h1>
+
+            {% for post in posts %}
+            <article>
+                <h2><a href="singlepost.html">{{ post.title}}</a></h2>
+
+                <div class="row">
+                    <div class="col-sm-6 col-md-6">
+                        <i class="fa fa-user"></i> &nbsp;<a href="#">Admin</a>
+                        &nbsp;&nbsp;<i class="fa fa-tags"></i> <a href="#">Symfony 2</a>, <a href="#">Doctrine 2</a>
+                    </div>
+                    <div class="col-sm-6 col-md-6">
+                        <i class="fa fa-comments"></i> <a href="singlepost.html#comments">20 Comentarios</a>
+                        &nbsp;&nbsp;<i class="fa fa-clock-o"></i> 24 Agosto, 2013
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <br />
+
+
+                  <p>{{ post.body|length > 500 ? post.body|slice(0, 500) ~ ' (...)' : post.body  }}</p>
+
+                  <p class="text-right">
+                      <a href="singlepost.html">
+                        continuar leyendo...
+                      </a>
+                  </p>
+
+                  <hr>
+            </article>
+
+            {% endfor %}
+
+
+            <ul class="pager">
+                <li class="previous"><a href="#">&larr; Anterior</a></li>
+                <li class="next"><a href="#">Siguiente &rarr;</a></li>
+            </ul>
+
+        </div>
+        {# <div class="col-md-4" id="sidebar">
+
+            <!-- Latest Posts -->
+            <div id="recent-posts">
+                <h4>Posts Recientes</h4>
+                <ul>
+                    <li><a href="#">A relaxing vacation adventure</a>
+                    </li>
+                    <li><a href="#">The vibrantly colorful frogs of Costa Rica</a>
+                    </li>
+                    <li><a href="#">Beauty, speed and clean lines</a>
+                    </li>
+                    <li><a href="#">Our beautiful lonely blue planet</a>
+                    </li>
+                    <li><a href="#">If you have to drive, cruise in style</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Categories -->
+            <div id="recent-posts">
+                <h4>Categorías</h4>
+                <ul>
+                    <li><a href="#">A relaxing vacation adventure</a>
+                    </li>
+                    <li><a href="#">The vibrantly colorful frogs of Costa Rica</a>
+                    </li>
+                    <li><a href="#">Beauty, speed and clean lines</a>
+                    </li>
+                    <li><a href="#">Our beautiful lonely blue planet</a>
+                    </li>
+                    <li><a href="#">If you have to drive, cruise in style</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tags -->
+            <div id="tags">
+                <h4>Tags</h4>
+                <div>
+                <a href="#">Symfony 2</a>
+
+                <a href="#">Doctrine 2</a>
+
+                  <a href="#">Varnish</a>
+                </div>
+            </div>
+
+            <!-- Recent Comments -->
+            <div id="recent-posts">
+                <h4>Últimos Comentarios</h4>
+                <ul>
+                    <li><a href="#">A relaxing vacation adventure</a>
+                    </li>
+                    <li><a href="#">The vibrantly colorful frogs of Costa Rica</a>
+                    </li>
+                    <li><a href="#">Beauty, speed and clean lines</a>
+                    </li>
+                    <li><a href="#">Our beautiful lonely blue planet</a>
+                    </li>
+                    <li><a href="#">If you have to drive, cruise in style</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div> #}
+    </div>
+</div>
+
+{% endblock %}

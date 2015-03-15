@@ -6,26 +6,20 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
-class MainController extends Controller
+class BlogController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/blog", name="blog_index")
      */
     public function indexAction()
     {
-        // //$this->get('stats')->addInfo('importacion', 'sd');
-        // $message = \Swift_Message::newInstance()
-        // ->setSubject('Hello Email')
-        // ->setFrom('send@example.com')
-        // ->setTo('recipient@example.com')
-        // ->setBody(
-        //     'asdasd'
-        // );
+        $post_manager = $this->container->get('app.manager.post');
+        $posts = $post_manager->findLastPosts();
 
-        // $this->get('mailer')->send($message);
-        // die;
-
-        return $this->render('main/index.html.twig');
+        return $this->render(
+            'blog/index.html.twig',
+            ['posts' => $posts]
+        );
 
     }
 
@@ -44,4 +38,16 @@ class MainController extends Controller
     //     return $this->render('default/product.html.twig', ['product'=> $product->Items->Item]);
 
     // }
+
+        //$this->get('stats')->addInfo('importacion', 'sd');
+        // $message = \Swift_Message::newInstance()
+        // ->setSubject('Hello Email')
+        // ->setFrom('send@example.com')
+        // ->setTo('recipient@example.com')
+        // ->setBody(
+        //     'asdasd'
+        // );
+
+        // $this->get('mailer')->send($message);
+        // die;
 }

@@ -4,6 +4,9 @@ parameters:
 #    parameter_name: value
 
 services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    app.manager.post:
+        class: AppBundle\Manager\PostManager
+        arguments:
+            # dispatcher: "@event_dispatcher"
+            em: "@doctrine.orm.entity_manager"
+            class: AppBundle\Entity\Post

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fran Vega Backend</title>
+
+    <!-- FONTAWESOME ICONS STYLES-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <!-- BOOTSTRAP STYLES-->
+    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" />
+
+        <!--CUSTOM STYLES-->
+    <link href="{{ asset('css/backend.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/default.min.css') }}" rel="stylesheet" />
+
+      <!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a  class="navbar-brand" href="index.html">fran.vega
+
+                </a>
+            </div>
+
+            <div class="notifications-wrapper">
+                <ul class="nav">
+
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user-plus"></i>  <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#"><i class="fa fa-user-plus"></i> My Profile</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="fa fa-sign-out"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /. NAV TOP  -->
+        <nav  class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                     <li>
+                        <a  href="#"> <strong> Admin </strong></a>
+                    </li>
+
+                    <li>
+                        <a   href="index.html"><i class="fa fa-dashboard "></i>Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a class="active-menu" href="{{ path('posts') }}"><i class="fa fa-dashcube "></i>Posts</a>
+                    </li>
+                    <li>
+                        <a class="menu" href="blank.html"><i class="fa fa-dashcube "></i>Comentarios</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </nav>
+        <!-- /. SIDEBAR MENU (navbar-side) -->
+        <div id="page-wrapper" class="page-wrapper-cls">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-head-line">Nuevo Post</h1>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="content-box-large">
+                            <div class="panel-body">
+                                {{ form_start(form) }}
+                                <fieldset>
+                                        <div class="form-group">
+                                            {{ form_label(form.title) }}
+                                            {{ form_widget(form.title, { 'attr': {'class': 'form-control'} }) }}
+                                        </div>
+                                        <div class="form-group">
+                                            {{ form_label(form.body) }}
+                                            {{ form_widget(form.body, { 'attr': {'class': 'form-control'} }) }}
+                                        </div>
+                                        <div>
+                                            {{ form_label(form.published) }}
+                                            {{ form_widget(form.published) }}
+                                        </div>
+                                </fieldset>
+
+                                <input type="submit" value="Guardar" class="btn btn-primary pull-right" />
+                                {{ form_end(form) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- /. PAGE INNER  -->
+            </div>
+        <!-- /. PAGE WRAPPER  -->
+        </div>
+    <!-- /. WRAPPER  -->
+    <footer >
+        Fran Vega
+    </footer>
+    <!-- /. FOOTER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="{{ asset('js/jquery-1.11.1.js') }}"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+
+<script src="{{ asset('js/bootstrap-wysiwyg.min.js') }}"></script>
+
+
+    <script type="text/javascript">
+
+$(function() {
+$('#editor').ace_wysiwyg({
+      toolbar:
+      [
+        {
+          name:'font',
+          title:'Custom tooltip',
+          values:['Some Special Font!','Arial','Verdana','Comic Sans MS','Custom Font!']
+        },
+        null,
+        {
+          name:'fontSize',
+          title:'Custom tooltip',
+          values:{1 : 'Size#1 Text' , 2 : 'Size#1 Text' , 3 : 'Size#3 Text' , 4 : 'Size#4 Text' , 5 : 'Size#5 Text'}
+        },
+        null,
+        {name:'bold', title:'Custom tooltip'},
+        {name:'italic', title:'Custom tooltip'},
+        {name:'strikethrough', title:'Custom tooltip'},
+        {name:'underline', title:'Custom tooltip'},
+        null,
+        'insertunorderedlist',
+        'insertorderedlist',
+        'outdent',
+        'indent',
+        null,
+        {name:'justifyleft'},
+        {name:'justifycenter'},
+        {name:'justifyright'},
+        {name:'justifyfull'},
+        null,
+        {
+          name:'createLink',
+          placeholder:'Custom PlaceHolder Text',
+          button_class:'btn-purple',
+          button_text:'Custom TEXT'
+        },
+        {name:'unlink'},
+        null,
+        {
+          name:'insertImage',
+          placeholder:'Custom PlaceHolder Text',
+          button_class:'btn-inverse',
+          //choose_file:false,//hide choose file button
+          button_text:'Set choose_file:false to hide this',
+          button_insert_class:'btn-pink',
+          button_insert:'Insert Image'
+        },
+      ],
+      //speech_button:false,//hide speech button on chrome
+
+      'wysiwyg': {
+        hotKeys : {} //disable hotkeys
+      }
+
+    }).prev().addClass('wysiwyg-style2');
+  });
+});
+
+
+
+    </script>
+</body>
+</html>

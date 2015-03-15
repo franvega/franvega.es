@@ -1,0 +1,149 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<!-- first section - Home -->
+<div id="home" class="bg-grey">
+    <div class="container text-center padding-top-bottom">
+        <h1 class="section-title">Desarrollador web PHP/Symfony 2</h1>
+        <p class="section-description">¡Hola! Me llamo Fran Vega, y soy un desarrollador web con más de 7 años de experiencia en diseño web (HTML5, CSS3, Bootstrap3) y programación web especializado en desarrollos a medida en lenguaje PHP y usando el framework Symfony 2. Siempre poniendo un especial énfasis en utilizar buenas prácticas y código limpio en los desarrollos. </p>
+        <div class="row">
+            <div class="col-sm-4">
+                <h1>Frontend </h1>
+<!--                        <img src="img/service1.png" />-->
+                <p>As a javascript developer, I have experience in HTML5 and CSS3 techniques working with jQuery or more advanced javascript MVC frameworks such as angular</p>
+            </div>
+            <div class="col-sm-4">
+                <h1>Backend</h1>
+<!--                        <img src="img/service2.png" />-->
+                <p>Utilizando tanto php "a pelo" como Symfony 2, he realizado multitud de desarrollos para la captura, análisis y presentación de la información, incluyendo servicios web, APIS REST y paneles de gestión de datos.</p>
+            </div>
+            <div class="col-sm-4">
+                <h1>SysAdmin</h1>
+<!--                        <img src="img/service5.png" width="120" height="120" />-->
+                <p>Y tambien tengo conocimientos en administración de sistemas y de servidores web linux (Apache2 y Nginx) y de cacheo web mediante Varnish.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /first section -->
+<div id="skills">
+    <div class="container padding-top-bottom">
+        <h1 class="section-title">Mis conocimientos</h1>
+        <div class="row">
+            <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+                <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
+                    <span data-percent="90" class="chart skilBg">
+                        <span class="percent"></span>
+                        <canvas height="152" width="152"></canvas>
+                    </span>
+                    <h4>Symfony 2</h4>
+                    <p>Desarrollo web ágil</p>
+                </div>
+            </div>
+            <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+                <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
+                    <span data-percent="80" class="chart skilBg">
+                        <span class="percent"></span>
+                        <canvas height="152" width="152"></canvas>
+                    </span>
+                    <h4>HTML5 / CSS3 / JavaScript</h4>
+                    <p>Diseño web limpio, moderno y responsive</p>
+                </div>
+            </div>
+            <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+                <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
+                    <span data-percent="90" class="chart skilBg">
+                        <span class="percent"></span>
+                        <canvas height="152" width="152"></canvas>
+                    </span>
+                    <h4>MySQL / SQL Server</h4>
+                    <p>Queries, stored procedures, funciones, triggers y administración de bases de datos</p>
+                </div>
+            </div>
+            <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+                <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
+                    <span data-percent="90" class="chart skilBg">
+                        <span class="percent"></span>
+                        <canvas height="152" width="152"></canvas>
+                    </span>
+                    <h4>ASP Clásico</h4>
+                    <p>Mantenimiento de webs antigüas</p>
+                </div>
+            </div>
+            <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+                <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
+                    <span data-percent="70" class="chart skilBg">
+                        <span class="percent"></span>
+                        <canvas height="152" width="152"></canvas>
+                    </span>
+                    <h4>C# y vb .NET</h4>
+                    <p>Aplicaciones de escritorio</p>
+                </div>
+            </div>
+            <div class=" col-xs-12 col-sm-4 col-md-4 col-lg-4 skillsArea">
+                <div class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 skills">
+                    <span data-percent="90" class="chart skilBg">
+                        <span class="percent"></span>
+                        <canvas height="152" width="152"></canvas>
+                    </span>
+                    <h4>SCRUM</h4>
+                    <p>Acostumbrado a utilizarlo en los desarrollos</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="contact" class="bg-contact padding-top-bottom">
+    <div class="container">
+        <h1 class="section-title">Contacta conmigo </h1>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <i class="fa fa-envelope-o fa-4x"></i>
+                <p>hola@franvega.com</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fa fa-skype fa-4x"></i>
+                <p>franvega</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fa fa-mobile fa-4x"></i>
+                <p>666 66 66 66</p>
+            </div>
+        </div>
+        <div class="row">
+            <!--=== Contact Form ===-->
+        <form novalidate="" method="post" action="" class="col-sm-8 col-sm-offset-2" id="contact-form">
+            <div class="form-group">
+                <label for="contact-name" class="control-label">Nombre</label>
+                <div class="controls">
+                    <input type="text" data-error-empty="Por favor introduce tu nombre" class="form-control requiredField" placeholder="Tu nombre" name="contactName" id="contact-name">
+                </div>
+            </div>
+            <!-- End name input -->
+            <div class="form-group honey">
+                <label for="contact-name" class="control-label">Apellido</label>
+                <div class="controls">
+                    <input type="text" class="form-control" placeholder="Your name" name="lastName" id="last-name">
+                </div>
+            </div>
+            <!-- End name input -->
+            <div class="form-group">
+                <label for="contact-mail" class="control-label">Email</label>
+                <div class=" controls">
+                    <input type="email" data-error-invalid="Invalid email address" data-error-empty="Por favor introduce tu email" class="form-control requiredField" placeholder="Tu email" name="email" id="contact-mail">
+                </div>
+            </div>
+            <!-- End email input -->
+            <div class="form-group">
+                <label for="contact-message" class="control-label">Mensaje</label>
+                <div class="controls">
+                    <textarea data-error-empty="Por favor escriba el mensaje" rows="8" class="form-control requiredField" placeholder="Tu mensaje" name="comments" id="contact-message"></textarea>
+                </div>
+            </div>
+            <!-- End textarea -->
+        </form>
+        <!-- End contact-form -->
+    </div>
+    </div>
+</div>
+{% endblock %}

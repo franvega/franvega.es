@@ -1,0 +1,91 @@
+body {
+	background-color: #FFF;
+	color: black;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.64285;
+	overflow-x: hidden;
+	height: auto;
+	position: relative;
+}
+
+
+footer {
+	margin: 10px 0;
+}
+
+#comments, #comments li {
+    margin: 0;
+    padding: 0;
+}
+
+#comments li {
+    list-style: none;
+}
+
+.photo {
+	margin-bottom: 10px;
+}
+
+.social-buttons button {
+	margin-top: 5px;
+}
+
+#sidebar ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+#sidebar li:before {
+  font-family: 'FontAwesome';
+
+  content: "\f101";
+
+  margin-right: 6px;
+
+  color: #50525f;
+}
+#sidebar li {
+margin: 0;
+padding: 5px 0;
+border-bottom: 1px solid #EEE;
+}
+
+a, a:link, a:visited {
+text-decoration: none;
+color: #50525f;
+  outline: 0;
+    -webkit-transition: all 0.25s;
+-moz-transition: all 0.25s;
+-o-transition: all 0.25s;
+transition: all 0.25s;
+}
+a:active, a:hover {
+color: #f56363;
+  outline: 0;
+}
+
+#sidebar h4 {
+margin-top: 40px;
+margin-bottom: 20px;
+text-transform: uppercase;
+font-weight: 700;
+}
+
+#sidebar #tags a{
+	display: inline-block;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	background: #555555;
+	color: #ffffff;
+	padding: 10px;
+	text-decoration: none;
+	-webkit-transition: all 300ms linear;
+	-moz-transition: all 300ms linear;
+	-o-transition: all 300ms linear;
+	transition: all 300ms linear;
+}
+
+#sidebar #tags a:hover{
+	background: #333333;
+}
