@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-        <link href="css/bootstrap-social.css" rel="stylesheet">
+        <link href="{{ asset('css/bootstrap-social.css') }}" rel="stylesheet">
         <link href="{{ asset('css/main.css') }}" rel="stylesheet" />
 
         <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -52,15 +52,14 @@
                     </div>
                     <div class="col-md-4 social">
                         <ul class="icons list-inline">
-                            <li><a class="btn btn-github btn-lg"><i class="fa fa-github"></i></a></li>
-                           <li><a class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a></li>
-                            <a onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-lg']);" class="btn btn-social-icon btn-lg btn-pinterest"><i class="fa fa-pinterest"></i></a>
+                            <li><a class="btn btn-social-icon btn-github" href="https://github.com/franvega"><i class="fa fa-github"></i></a></li>
+                            <li><a class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                     <div class="col-md-4 social">
-                        <span>Codigo fuente</span>
+                        <a href="https://github.com/franvega/franvega.es"><span>Codigo fuente</span></a>
                     </div>
+
                 </div>
             </div>
         </footer>
